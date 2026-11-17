@@ -1,0 +1,398 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Portfolio | Student</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --pink: #d99aaa;
+    --dark-pink: #b87589;
+    --cream: #fff7f4;
+    --text: #514448;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #fffaf8;
+    color: var(--text);
+    line-height: 1.7;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(255,250,248,0.95);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #f4e5e5;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    color: var(--dark-pink);
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--dark-pink);
+}
+
+.hero {
+    min-height: 88vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #fff1f1, #fffaf5, #fce9ed);
+}
+
+.tag {
+    color: var(--dark-pink);
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 76px);
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: var(--dark-pink);
+}
+
+.hero p {
+    max-width: 550px;
+    color: #796b70;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--dark-pink);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #a9657c;
+    transform: translateY(-3px);
+}
+
+section {
+    padding: 85px 10%;
+    scroll-margin-top: 75px;
+}
+
+.section-title {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #9b858c;
+    margin-bottom: 40px;
+}
+
+.about-content {
+    max-width: 750px;
+    margin: auto;
+    text-align: center;
+    font-size: 16px;
+}
+
+.skills, .projects {
+    background: var(--cream);
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 18px;
+    border: 1px solid #f1dce1;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(190,130,150,0.15);
+}
+
+.card h3 {
+    color: var(--dark-pink);
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.education-box {
+    max-width: 650px;
+    margin: auto;
+    padding: 35px;
+    background: var(--cream);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.education-box h3 {
+    color: var(--dark-pink);
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.contact {
+    text-align: center;
+    background: #fffaf8;
+}
+
+.contact p {
+    margin-bottom: 25px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #f6e6e8;
+    color: #77636a;
+    font-size: 13px;
+}
+
+@media(max-width: 650px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 13px;
+    }
+
+    section {
+        padding: 65px 7%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+    <div class="logo">My Portfolio ♡</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+    <p class="tag">WELCOME TO MY PORTFOLIO</p>
+
+    <h1>Hello, I'm <span>Your Name</span> ♡</h1>
+
+    <p>
+        A student who loves learning, exploring technology
+        and turning creative ideas into reality.
+        Welcome to my little corner of the internet!
+    </p>
+
+    <a href="#about" class="btn">Discover More ♡</a>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <p class="subtitle">A little introduction about myself</p>
+
+    <div class="about-content">
+        <p>
+            Hello! I'm a student passionate about learning
+            and discovering new things.
+
+            I enjoy exploring technology, developing my
+            programming skills and working on creative
+            projects.
+
+            I believe that every little step helps me
+            grow and become better every day.
+        </p>
+    </div>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+    <h2 class="section-title">Education</h2>
+
+    <p class="subtitle">My academic journey</p>
+
+    <div class="education-box">
+
+        <h3>My Education ♡</h3>
+
+        <p><strong>Institution:</strong> Your Institution</p>
+
+        <p><strong>Course:</strong> Your Course</p>
+
+        <p><strong>Year:</strong> Your Year</p>
+
+    </div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section class="skills" id="skills">
+
+    <h2 class="section-title">My Skills</h2>
+
+    <p class="subtitle">Things I'm learning and exploring</p>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h3>HTML</h3>
+            <p>Building the structure of beautiful webpages.</p>
+        </div>
+
+        <div class="card">
+            <h3>CSS</h3>
+            <p>Designing stylish and responsive websites.</p>
+        </div>
+
+        <div class="card">
+            <h3>Python</h3>
+            <p>Exploring programming and problem solving.</p>
+        </div>
+
+        <div class="card">
+            <h3>Creativity</h3>
+            <p>Turning imagination into meaningful ideas.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section class="projects" id="projects">
+
+    <h2 class="section-title">My Projects</h2>
+
+    <p class="subtitle">A collection of my work</p>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h3>Project One</h3>
+            <p>Add a description of your first project here.</p>
+        </div>
+
+        <div class="card">
+            <h3>Project Two</h3>
+            <p>Add a description of your second project here.</p>
+        </div>
+
+        <div class="card">
+            <h3>Project Three</h3>
+            <p>Add a description of your third project here.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <h2 class="section-title">Let's Connect!</h2>
+
+    <p class="subtitle">
+        Thank you for visiting my portfolio ♡
+    </p>
+
+    <a href="mailto:your-email@example.com" class="btn">
+        Send Me an Email
+    </a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>Made with ♡ by Your Name</p>
+
+    <p>© 2026 My Portfolio. All rights reserved.</p>
+
+</footer>
+
+</body>
+</html>
